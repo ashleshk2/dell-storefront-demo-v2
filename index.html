@@ -122,7 +122,7 @@
     }
     .product-card {
       position: relative;
-      background: #ffffff;
+      background: var(--white);
       border-radius: 16px;
       box-shadow: var(--card-shadow);
       overflow: hidden;
@@ -149,19 +149,18 @@
     }
     .card-img-wrap {
       position: relative;
-      height: 220px;
-      background: #f8f8f8;
+      height: 240px;
+      background: var(--lighter-bg);
       overflow: hidden;
     }
     .card-img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      padding: 16px;
+      object-fit: cover;
     }
     .card-body {
       padding: var(--space-md);
-      border-top: 1px solid #f0f0f0;
+      border-top: 1px solid var(--border);
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -169,13 +168,13 @@
     .card-name {
       font-size: 14px;
       font-weight: 700;
-      color: #111111;
+      color: var(--text);
       margin-bottom: 6px;
       line-height: 1.35;
     }
     .card-desc {
       font-size: 12px;
-      color: #666666;
+      color: var(--text-muted);
       line-height: 1.45;
       margin-bottom: var(--space-sm);
       display: -webkit-box;
@@ -196,70 +195,6 @@
       text-align: center;
       cursor: pointer;
       margin-top: auto;
-    }
-
-    /* ── Complete Workspace ── */
-    .workspace-section {
-      background: var(--white);
-      padding: var(--space-2xl) 0;
-    }
-    .workspace-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-xl);
-      align-items: center;
-    }
-    .workspace-visual {
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.12);
-    }
-    .workspace-visual img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .workspace-content {}
-    .workspace-content .eyebrow {
-      display: block;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--brand-blue);
-      margin-bottom: 12px;
-    }
-    .workspace-content h2 {
-      color: var(--brand-dark-tint);
-      margin-bottom: var(--space-md);
-    }
-    .workspace-content p {
-      color: var(--text-muted);
-      font-size: 1rem;
-      line-height: 1.75;
-      margin-bottom: var(--space-md);
-    }
-    .workspace-includes {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: var(--space-lg);
-    }
-    .workspace-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 14px;
-      color: var(--text);
-      font-weight: 500;
-    }
-    .workspace-item-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--brand-blue);
-      flex-shrink: 0;
     }
 
     /* ── Category Tiles ── */
@@ -323,79 +258,6 @@
       border: 1px solid rgba(255,255,255,0.18);
     }
 
-    /* ── Enterprise Strip ── */
-    .enterprise-strip {
-      background: var(--brand-dark-tint);
-      padding: var(--space-2xl) 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .enterprise-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-xl);
-      align-items: center;
-    }
-    .enterprise-visual {
-      position: relative;
-      border-radius: 16px;
-      overflow: hidden;
-      min-height: 320px;
-    }
-    .enterprise-visual img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .enterprise-visual-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, rgba(9,24,64,0.3) 0%, transparent 60%);
-    }
-    .enterprise-content {}
-    .enterprise-content .eyebrow {
-      display: block;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 12px;
-    }
-    .enterprise-content h2 {
-      color: #ffffff;
-      margin-bottom: var(--space-md);
-      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-    }
-    .enterprise-content p {
-      color: rgba(255,255,255,0.62);
-      font-size: 1rem;
-      line-height: 1.7;
-      margin-bottom: var(--space-lg);
-    }
-    .enterprise-stats {
-      display: flex;
-      gap: var(--space-lg);
-      margin-bottom: var(--space-lg);
-    }
-    .e-stat {}
-    .e-stat-num {
-      font-size: 28px;
-      font-weight: 800;
-      color: #ffffff;
-      display: block;
-      line-height: 1.1;
-    }
-    .e-stat-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: rgba(255,255,255,0.4);
-      margin-top: 4px;
-      display: block;
-    }
-
     /* ── CTA Banner ── */
     .cta-banner {
       background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-mid) 100%);
@@ -434,10 +296,7 @@
       .duo-card { min-height: 340px; }
       .duo-product-img { width: 55%; opacity: 0.35; }
       .best-sellers-grid { grid-template-columns: repeat(2, 1fr); }
-      .workspace-inner { grid-template-columns: 1fr; }
-      .enterprise-inner { grid-template-columns: 1fr; }
       .tiles-grid { grid-template-columns: repeat(2, 1fr); }
-      .enterprise-stats { flex-wrap: wrap; gap: var(--space-md); }
     }
   </style>
 </head>
@@ -645,6 +504,55 @@
 
 
 <!-- ══════════════════════════════════════════
+     CATEGORY TILES — shop by category
+══════════════════════════════════════════ -->
+<section class="category-tiles-section section-fade" id="all-products">
+  <div class="container">
+    <span class="section-eyebrow">SHOP BY CATEGORY</span>
+    <h2 style="color:var(--white); margin-bottom: var(--space-lg);">Browse the Full Dell Lineup</h2>
+    <div class="tiles-grid">
+
+      <a class="category-tile" href="laptops.html">
+        <img class="tile-img"
+          src="https://i.dell.com/is/image/DellContent/content/dam/documents-and-videos/dv2/pan-dell/en/product-launch/laptops-and-2n1s/dell-pro-laptops/dell-pro-7-p703260-p703265-p704260-p704265/site-banners/2601g0170-gl-bb-site-dell-pro-7-laptop-p703260-p704260-family-shot-1610x906-intel.jpg?wid=400&hei=225"
+          alt="Dell Laptops">
+        <span class="tile-label">Laptops</span>
+      </a>
+
+      <a class="category-tile" href="monitors.html">
+        <img class="tile-img"
+          src="https://m.media-amazon.com/images/I/81VN59ERV0L._AC_SL1500_.jpg"
+          alt="Dell UltraSharp Monitors">
+        <span class="tile-label">Monitors</span>
+      </a>
+
+      <a class="category-tile" href="desktops.html">
+        <img class="tile-img"
+          src="https://m.media-amazon.com/images/I/61cJMkuErnL._AC_SL1016_.jpg"
+          alt="Dell Desktops">
+        <span class="tile-label">Desktops</span>
+      </a>
+
+      <a class="category-tile" href="accessories.html">
+        <img class="tile-img"
+          src="https://m.media-amazon.com/images/I/71RK4N4b0cL._AC_SL1500_.jpg"
+          alt="Dell Accessories">
+        <span class="tile-label">Accessories</span>
+      </a>
+
+      <a class="category-tile" href="servers.html">
+        <img class="tile-img"
+          src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/r760xs/media-gallery/server-poweredge-r760xs-black-gallery-5.psd?fmt=pjpg&pscan=auto&scl=1&hei=906&wid=1610&qlt=100,1&resMode=sharp2&size=1610,906"
+          alt="Dell Servers">
+        <span class="tile-label">Servers</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
      FEATURED PRODUCTS DUO
      Dell Pro 7 Laptop + UltraSharp U2725QE
 ══════════════════════════════════════════ -->
@@ -718,7 +626,7 @@
         <span class="best-seller-badge">BEST SELLER</span>
         <div class="card-img-wrap">
           <img class="card-img"
-            src="https://m.media-amazon.com/images/I/71XLT2yFKYL._AC_SL1500_.jpg"
+            src="https://m.media-amazon.com/images/I/61cJMkuErnL._AC_SL1016_.jpg"
             alt="Dell OptiPlex 7020 Micro Desktop">
         </div>
         <div class="card-body">
@@ -761,136 +669,6 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════
-     COMPLETE WORKSPACE SECTION
-══════════════════════════════════════════ -->
-<section class="workspace-section section-fade" id="workspace">
-  <div class="container">
-    <div class="workspace-inner">
-      <div class="workspace-visual">
-        <img
-          src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/na/promo-carousel/wtn-showc-cons-dell-pc14250-e2725hm-km555-wd25-wl3024-wb3023-uhp-2604-01-us-promo-c-lf-1610x906.jpg?wid=1610&hei=906"
-          alt="Complete Dell workspace setup with desktop, monitor, keyboard, dock, and webcam"
-          width="1610" height="906">
-      </div>
-      <div class="workspace-content">
-        <span class="eyebrow">COMPLETE WORKSPACE</span>
-        <h2>One Brand. Every Component on Your Desk.</h2>
-        <p>From the workstation under the desk to the monitor at eye level — Dell makes every component in an enterprise setup. Designed to work together, supported by a single ProSupport contract.</p>
-        <div class="workspace-includes">
-          <div class="workspace-item">
-            <span class="workspace-item-dot"></span>
-            <span>Dell Pro Desktop — Intel Core Ultra, Windows 11 Pro</span>
-          </div>
-          <div class="workspace-item">
-            <span class="workspace-item-dot"></span>
-            <span>UltraSharp Monitor — factory-calibrated 4K IPS display</span>
-          </div>
-          <div class="workspace-item">
-            <span class="workspace-item-dot"></span>
-            <span>WD25TB5 Dock — Thunderbolt 5, dual display, 140W charge</span>
-          </div>
-          <div class="workspace-item">
-            <span class="workspace-item-dot"></span>
-            <span>KM555 Keyboard + Mouse — silent wireless, Copilot key</span>
-          </div>
-          <div class="workspace-item">
-            <span class="workspace-item-dot"></span>
-            <span>WB3023 Webcam — 1080p FHD, AI noise cancellation</span>
-          </div>
-        </div>
-        <a class="btn-brand" href="accessories.html">Shop Accessories</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════
-     CATEGORY TILES
-══════════════════════════════════════════ -->
-<section class="category-tiles-section section-fade" id="all-products">
-  <div class="container">
-    <span class="section-eyebrow">SHOP BY CATEGORY</span>
-    <h2 style="color:#ffffff; margin-bottom: var(--space-lg);">Browse the Full Dell Lineup</h2>
-    <div class="tiles-grid">
-
-      <a class="category-tile" href="laptops.html">
-        <img class="tile-img"
-          src="https://i.dell.com/is/image/DellContent/content/dam/documents-and-videos/dv2/pan-dell/en/product-launch/laptops-and-2n1s/dell-pro-laptops/dell-pro-7-p703260-p703265-p704260-p704265/site-banners/2601g0170-gl-bb-site-dell-pro-7-laptop-p703260-p704260-family-shot-1610x906-intel.jpg?wid=400&hei=225"
-          alt="Dell Laptops">
-        <span class="tile-label">Laptops</span>
-      </a>
-
-      <a class="category-tile" href="monitors.html">
-        <img class="tile-img"
-          src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/na/promo-carousel/wtn-showc-cons-dell-pc14250-e2725hm-km555-wd25-wl3024-wb3023-uhp-2604-01-us-promo-c-lf-1610x906.jpg?wid=400&hei=225"
-          alt="Dell Monitors">
-        <span class="tile-label">Monitors</span>
-      </a>
-
-      <a class="category-tile" href="desktops.html">
-        <img class="tile-img"
-          src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/prod-8062853-getty-2198589663-dell-pro-pc14250nt-wl3024-1610x906.jpg?wid=400&hei=225"
-          alt="Dell Desktops">
-        <span class="tile-label">Desktops</span>
-      </a>
-
-      <a class="category-tile" href="accessories.html">
-        <img class="tile-img"
-          src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/shutterstock-2352697593-na-spring-sale-db14250nt-se2726h-2560x900.jpg?fmt=pjpg&pscan=auto&scl=1&hei=225&wid=400&resMode=sharp2&size=400,225&op_usm=1.75,0.3,2,0"
-          alt="Dell Accessories">
-        <span class="tile-label">Accessories</span>
-      </a>
-
-      <a class="category-tile" href="servers.html">
-        <img class="tile-img"
-          src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/r760xs/media-gallery/server-poweredge-r760xs-black-gallery-5.psd?fmt=pjpg&pscan=auto&scl=1&hei=906&wid=1610&qlt=100,1&resMode=sharp2&size=1610,906"
-          alt="Dell Servers">
-        <span class="tile-label">Servers</span>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════
-     ENTERPRISE CREDIBILITY STRIP
-══════════════════════════════════════════ -->
-<section class="enterprise-strip section-fade">
-  <div class="container">
-    <div class="enterprise-inner">
-      <div class="enterprise-visual">
-        <img
-          src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/b2l-wellcome-sanger-institute-2880x1620.jpg?fmt=pjpg&op_usm=1.75,0.3,2,0&resMode=sharp2&wid=2880&hei=1620"
-          alt="Wellcome Sanger Institute enterprise Dell deployment"
-          width="2048" height="1152">
-        <div class="enterprise-visual-overlay"></div>
-      </div>
-      <div class="enterprise-content">
-        <span class="eyebrow">ENTERPRISE SCALE</span>
-        <h2>Trusted by the World's Most Demanding IT Teams</h2>
-        <p>From research laboratories to financial institutions — Dell ProSupport and Next Business Day On-Site Service keeps enterprise infrastructure running without interruption. Fleet management, BIOS policy control, and ProDeploy imaging at scale.</p>
-        <div class="enterprise-stats">
-          <div class="e-stat">
-            <span class="e-stat-num">NBD</span>
-            <span class="e-stat-label">On-Site Service</span>
-          </div>
-          <div class="e-stat">
-            <span class="e-stat-num">3yr</span>
-            <span class="e-stat-label">ProSupport Coverage</span>
-          </div>
-          <div class="e-stat">
-            <span class="e-stat-num">vPro</span>
-            <span class="e-stat-label">Hardware Security</span>
-          </div>
-        </div>
-        <a class="btn-outline" href="servers.html">Enterprise Infrastructure</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <!-- ══════════════════════════════════════════
