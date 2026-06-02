@@ -877,6 +877,8 @@ p { margin-bottom: 0; line-height: 1.7; font-size: 1rem; }
   text-align: center;
   position: relative;
   overflow: hidden;
+  /* Prevent pseudo-element width:140% from causing horizontal scroll */
+  contain: layout;
 }
 .cta-banner::before {
   content: '';

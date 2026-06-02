@@ -119,7 +119,8 @@ function initScrollReveal() {
     });
   });
 
-  // Intersection observer — threshold 0.08 so cards trigger before fully visible
+  // Intersection observer — threshold 0 so any pixel entering viewport triggers reveal
+  // rootMargin '0px' with no negative bottom ensures elements near/below fold are captured
   const observer = new IntersectionObserver(
     function(entries) {
       entries.forEach(function(entry) {
@@ -130,12 +131,20 @@ function initScrollReveal() {
         }
       });
     },
-    { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0, rootMargin: '0px 0px 100px 0px' }
   );
 
   document.querySelectorAll('.section-fade').forEach(function(el) {
     observer.observe(el);
   });
+
+  // Safety fallback: after 800ms reveal any elements that still haven't fired
+  // (handles cases where observer doesn't trigger for off-screen elements on some browsers)
+  setTimeout(function() {
+    document.querySelectorAll('.section-fade:not(.visible)').forEach(function(el) {
+      el.classList.add('visible');
+    });
+  }, 800);
 }
 
 /* Stats counter animation — animate stat numbers on reveal
