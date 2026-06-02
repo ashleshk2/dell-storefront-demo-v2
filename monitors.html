@@ -75,7 +75,7 @@
     .duo-card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px rgba(0,118,206,0.18); }
     .duo-glow { position: absolute; bottom: -80px; right: -80px; width: 280px; height: 280px; background: radial-gradient(ellipse, var(--brand-blue) 0%, transparent 70%); opacity: 0.15; pointer-events: none; transition: opacity 0.3s ease; }
     .duo-card:hover .duo-glow { opacity: 0.25; }
-    .duo-product-img { position: absolute; top: 10%; right: 5%; width: 55%; height: 55%; object-fit: contain; filter: drop-shadow(0 16px 32px rgba(0,0,0,0.5)); pointer-events: none; }
+    /* duo-product-img — uses global styles.css definition */
     .duo-content { position: relative; z-index: 2; }
     .duo-descriptor { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(0,118,206,0.9); margin-bottom: 8px; font-weight: 600; }
     .duo-product-name { font-size: clamp(24px, 3vw, 38px); font-weight: 800; line-height: 1.0; margin-bottom: var(--space-sm); letter-spacing: -0.02em; }
@@ -121,7 +121,7 @@
       .page-hero { height: 400px; }
       .duo-grid { grid-template-columns: 1fr; }
       .duo-card { min-height: 320px; }
-      .duo-product-img { width: 45%; opacity: 0.4; }
+      .duo-product-img { opacity: 0.45; }
       .specs-strip-inner { gap: var(--space-sm); }
     }
   </style>
@@ -350,6 +350,62 @@
           <span class="card-spec-tag">USB-C · TB4 Hub · Single-Cable</span>
           <h4 class="card-name">UltraSharp Hub — Single Cable Setup</h4>
           <p class="card-desc">One USB-C cable powers your laptop, transfers data, and drives the display at 4K. Reduces desk cable clutter by eliminating the need for a separate dock.</p>
+          <span class="card-atc">Add to Cart</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img-wrap">
+          <img class="card-img"
+            src="https://m.media-amazon.com/images/I/61X5+xWBlOL._AC_SL1500_.jpg"
+            alt="Dell UltraSharp 43 4K USB-C Hub Monitor U4323QE">
+        </div>
+        <div class="card-body">
+          <span class="card-spec-tag">43" · 4K IPS · USB-C Hub · 90W PD</span>
+          <h4 class="card-name">Dell UltraSharp 43" U4323QE</h4>
+          <p class="card-desc">43" 4K IPS USB-C Hub monitor — fits two full workspaces side by side. 90W Power Delivery, Thunderbolt 4 hub, built-in KVM switch.</p>
+          <span class="card-atc">Add to Cart</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img-wrap">
+          <img class="card-img"
+            src="https://m.media-amazon.com/images/I/71lQNQPr+OL._AC_SL1500_.jpg"
+            alt="Dell 27 Plus 4K USB-C Monitor S2725QC">
+        </div>
+        <div class="card-body">
+          <span class="card-spec-tag">27" · 4K · 120Hz · USB-C · FreeSync</span>
+          <h4 class="card-name">Dell 27 Plus 4K S2725QC</h4>
+          <p class="card-desc">27" 4K 120Hz display with AMD FreeSync Premium and USB-C connectivity — bridges productivity and creative workloads at a mid-tier price.</p>
+          <span class="card-atc">Add to Cart</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img-wrap">
+          <img class="card-img"
+            src="https://m.media-amazon.com/images/I/819wuizy+NL._AC_SL1500_.jpg"
+            alt="Dell UltraSharp U2723QE 27-inch 4K">
+        </div>
+        <div class="card-body">
+          <span class="card-spec-tag">27" · 4K · USB-C Hub · IPS Black</span>
+          <h4 class="card-name">Dell UltraSharp 27" U2723QE</h4>
+          <p class="card-desc">27" 4K USB-C Hub monitor with IPS Black panel — exceptional contrast for any office lighting. 90W PD, TB4 hub, factory-calibrated 99% sRGB.</p>
+          <span class="card-atc">Add to Cart</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img-wrap">
+          <img class="card-img"
+            src="https://m.media-amazon.com/images/I/716c7SkZEPL._AC_SL1500_.jpg"
+            alt="Dell Pro 32 Plus 4K USB-C Hub Monitor P3225QE">
+        </div>
+        <div class="card-body">
+          <span class="card-spec-tag">32" · 4K · USB-C Hub · Pro Series</span>
+          <h4 class="card-name">Dell Pro 32" Plus P3225QE</h4>
+          <p class="card-desc">32" 4K Pro series USB-C Hub monitor — VESA-mount ready, 90W Power Delivery, factory-calibrated for accurate color across the full sRGB gamut.</p>
           <span class="card-atc">Add to Cart</span>
         </div>
       </div>

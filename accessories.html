@@ -50,7 +50,7 @@
     .duo-card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px rgba(0,118,206,0.18); }
     .duo-glow { position: absolute; bottom: -80px; right: -80px; width: 280px; height: 280px; background: radial-gradient(ellipse, var(--brand-blue) 0%, transparent 70%); opacity: 0.15; pointer-events: none; transition: opacity 0.3s; }
     .duo-card:hover .duo-glow { opacity: 0.25; }
-    .duo-product-img { position: absolute; top: 8%; right: 4%; width: 55%; height: 52%; object-fit: contain; filter: drop-shadow(0 16px 32px rgba(0,0,0,0.5)); pointer-events: none; }
+    /* duo-product-img — uses global styles.css definition */
     .duo-content { position: relative; z-index: 2; }
     .duo-descriptor { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(0,118,206,0.9); margin-bottom: 8px; font-weight: 600; }
     .duo-product-name { font-size: clamp(24px, 3vw, 36px); font-weight: 800; line-height: 1.0; margin-bottom: var(--space-sm); letter-spacing: -0.02em; }
@@ -106,7 +106,7 @@
       .page-hero { height: 400px; }
       .duo-grid { grid-template-columns: 1fr; }
       .duo-card { min-height: 300px; }
-      .duo-product-img { width: 45%; opacity: 0.4; }
+      .duo-product-img { opacity: 0.45; }
     }
   </style>
 </head>
@@ -350,6 +350,34 @@
           <span class="card-spec-tag">Wireless · ANC · Teams Certified</span>
           <h4 class="card-name">Dell WL3024 Pro Wireless Headset</h4>
           <p class="card-desc">Microsoft Teams certified, active noise cancellation, 46hr battery, flip-to-mute boom mic — designed for hybrid workforce deployments.</p>
+          <span class="card-atc">Add to Cart</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img-wrap">
+          <img class="card-img"
+            src="https://m.media-amazon.com/images/I/71po2cpraPL._AC_SL1500_.jpg"
+            alt="Dell WD19TB Thunderbolt Docking Station">
+        </div>
+        <div class="card-body">
+          <span class="card-spec-tag">Thunderbolt 3 · 130W PD · 180W Adapter</span>
+          <h4 class="card-name">Dell WD19TB Thunderbolt Dock</h4>
+          <p class="card-desc">Thunderbolt 3 docking with 130W Power Delivery and 180W AC adapter — compatible with Latitude 7000/9000 and Precision mobile workstations.</p>
+          <span class="card-atc">Add to Cart</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img-wrap">
+          <img class="card-img"
+            src="https://m.media-amazon.com/images/I/715na2qj0nL._AC_SL1500_.jpg"
+            alt="Dell WD19S USB-C Docking Station 180W">
+        </div>
+        <div class="card-body">
+          <span class="card-spec-tag">USB-C · 130W PD · Dual Display</span>
+          <h4 class="card-name">Dell WD19S USB-C Dock (180W)</h4>
+          <p class="card-desc">USB-C 130W docking station — dual DisplayPort, HDMI, 4× USB-A, 3.5mm. Single-cable workstation setup for Latitude and Precision users.</p>
           <span class="card-atc">Add to Cart</span>
         </div>
       </div>
