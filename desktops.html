@@ -71,7 +71,7 @@
     .product-card { position: relative; background: var(--white); border-radius: 16px; box-shadow: var(--card-shadow); overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; display: flex; flex-direction: column; }
     .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
     .card-img-wrap { height: 240px; background: var(--lighter-bg); overflow: hidden; flex-shrink: 0; }
-    .card-img { width: 100%; height: 100%; object-fit: cover; }
+    .card-img { width: 100%; height: 100%; object-fit: contain; padding: 12px; }
     .card-body { padding: var(--space-md); border-top: 1px solid var(--border); display: flex; flex-direction: column; flex: 1; }
     .card-name { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; line-height: 1.35; }
     .card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.45; margin-bottom: var(--space-sm); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
@@ -170,13 +170,14 @@
 <section class="featured-duo section-fade">
   <div class="container">
     <span class="section-eyebrow">FEATURED PRODUCTS</span>
-    <h2 style="color:var(--white); margin-bottom: var(--space-lg);">Compact Power or Full Expansion — Your Choice</h2>
+    <h2 style="color: var(--brand-dark-tint); margin-bottom: var(--space-lg);">Compact Power or Full Expansion — Your Choice</h2>
     <div class="duo-grid">
       <div class="duo-card">
-        <div class="duo-glow"></div>
-        <img class="duo-product-img"
-          src="https://m.media-amazon.com/images/I/61cJMkuErnL._AC_SL1016_.jpg"
-          alt="Dell OptiPlex 7020 Micro">
+        <div class="duo-media">
+          <img class="duo-product-img"
+            src="https://m.media-amazon.com/images/I/61cJMkuErnL._AC_SL1016_.jpg"
+            alt="Dell OptiPlex 7020 Micro">
+        </div>
         <div class="duo-content">
           <p class="duo-descriptor">MICRO FORM FACTOR</p>
           <h3 class="duo-product-name">
@@ -188,10 +189,11 @@
         </div>
       </div>
       <div class="duo-card">
-        <div class="duo-glow"></div>
-        <img class="duo-product-img"
-          src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/prod-8062853-getty-2198589663-dell-pro-pc14250nt-wl3024-1610x906.jpg?wid=800&hei=450"
-          alt="Dell Pro Desktop PC14250">
+        <div class="duo-media">
+          <img class="duo-product-img"
+            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/desktops/dell-pro/qct1250/media-gallery/desktop-dell-pro-qct1250-tower-bk-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=804&wid=606&qlt=100,1&resMode=sharp2&size=606,804&chrss=full"
+            alt="Dell Pro Desktop PC14250">
+        </div>
         <div class="duo-content">
           <p class="duo-descriptor">TOWER DESKTOP</p>
           <h3 class="duo-product-name">
@@ -229,7 +231,7 @@
       <div class="product-card">
         <span class="best-seller-badge">BEST SELLER</span>
         <div class="card-img-wrap">
-          <img class="card-img" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/prod-8062853-getty-2198589663-dell-pro-pc14250nt-wl3024-1610x906.jpg?wid=800&hei=450" alt="Dell Pro Desktop">
+          <img class="card-img" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/desktops/dell-pro/qct1250/media-gallery/desktop-dell-pro-qct1250-tower-bk-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=804&wid=606&qlt=100,1&resMode=sharp2&size=606,804&chrss=full" alt="Dell Pro Desktop PC14250">
         </div>
         <div class="card-body">
           <h4 class="card-name">Dell Pro Desktop PC14250</h4>
@@ -240,22 +242,22 @@
       <div class="product-card">
         <span class="best-seller-badge">BEST SELLER</span>
         <div class="card-img-wrap">
-          <img class="card-img" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/na/promo-carousel/wtn-showc-cons-dell-pc14250-e2725hm-km555-wd25-wl3024-wb3023-uhp-2604-01-us-promo-c-lf-1610x906.jpg?wid=600&hei=338" alt="Dell workspace setup">
+          <img class="card-img" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/desktops/dell-pro/qct1250/media-gallery/desktop-dell-pro-qct1250-tower-bk-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=804&wid=606&qlt=100,1&resMode=sharp2&size=606,804&chrss=full" alt="Dell Pro PC14250 Tower Desktop">
         </div>
         <div class="card-body">
-          <h4 class="card-name">Dell Pro PC14250 — Complete Setup</h4>
-          <p class="card-desc">Desktop + UltraSharp monitor + WD25 dock + KM555 keyboard — complete workstation from one vendor.</p>
+          <h4 class="card-name">Dell Pro PC14250 — Tower Config</h4>
+          <p class="card-desc">Mid-tower with PCIe expansion bays — available with Dell ProSupport for fleet management and on-site service.</p>
           <span class="card-atc">Add to Cart</span>
         </div>
       </div>
       <div class="product-card">
         <span class="best-seller-badge">BEST SELLER</span>
         <div class="card-img-wrap">
-          <img class="card-img" src="https://m.media-amazon.com/images/I/51qaWzrivHL._AC_SL1320_.jpg" alt="Dell OptiPlex portrait">
+          <img class="card-img" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/desktops/optiplex-desktops/optiplex-d13-micro/media-gallery-13-5-standard/desktop-optiplex-7020-mff-black-gallery-2.psd?fmt=png-alpha&pscan=auto&scl=1&hei=804&wid=506&qlt=100,1&resMode=sharp2&size=506,804&chrss=full" alt="Dell OptiPlex 7020 Micro rear view">
         </div>
         <div class="card-body">
-          <h4 class="card-name">OptiPlex 7020 — Vertical Config</h4>
-          <p class="card-desc">Same Core Ultra performance in an upright desktop orientation — with optional VESA mount bracket for monitor-back installation.</p>
+          <h4 class="card-name">OptiPlex 7020 Micro — vPro Config</h4>
+          <p class="card-desc">Same Micro chassis with Intel vPro enabled — adds remote out-of-band management for large IT teams running BIOS policy deployments.</p>
           <span class="card-atc">Add to Cart</span>
         </div>
       </div>
@@ -319,7 +321,7 @@
       <div class="product-card">
         <div class="card-img-wrap">
           <img class="card-img"
-            src="https://m.media-amazon.com/images/I/61cJMkuErnL._AC_SL1016_.jpg"
+            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/desktops/optiplex-desktops/optiplex-d13-micro/media-gallery-13-5-standard/desktop-optiplex-7020-mff-black-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=804&wid=506&qlt=100,1&resMode=sharp2&size=506,804&chrss=full"
             alt="Dell OptiPlex 7020 Micro Desktop">
         </div>
         <div class="card-body">
@@ -333,7 +335,7 @@
       <div class="product-card">
         <div class="card-img-wrap">
           <img class="card-img"
-            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/prod-8062853-getty-2198589663-dell-pro-pc14250nt-wl3024-1610x906.jpg?wid=1610&hei=906"
+            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/desktops/dell-pro/qct1250/media-gallery/desktop-dell-pro-qct1250-tower-bk-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=804&wid=606&qlt=100,1&resMode=sharp2&size=606,804&chrss=full"
             alt="Dell Pro Desktop PC14250">
         </div>
         <div class="card-body">
@@ -347,7 +349,7 @@
       <div class="product-card">
         <div class="card-img-wrap">
           <img class="card-img"
-            src="https://m.media-amazon.com/images/I/51qaWzrivHL._AC_SL1320_.jpg"
+            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/desktops/optiplex-desktops/optiplex-d13-micro/media-gallery-13-5-standard/desktop-optiplex-7020-mff-black-gallery-2.psd?fmt=png-alpha&pscan=auto&scl=1&hei=804&wid=506&qlt=100,1&resMode=sharp2&size=506,804&chrss=full"
             alt="Dell OptiPlex 7020 Micro vPro configuration">
         </div>
         <div class="card-body">
@@ -361,12 +363,12 @@
       <div class="product-card">
         <div class="card-img-wrap">
           <img class="card-img"
-            src="https://i.dell.com/is/image/DellContent/content/dam/documents-and-videos/dv2/pan-dell/en/product-launch/laptops-and-2n1s/dell-pro-laptops/dell-pro-5-precision-pw514260-pw516260-pw514265-pw516265/site-banners/2601g0167-gl-bb-site-dell-pro-5-precision-laptops-pw514260-pw516260-1610x906-intel-clean.jpg?wid=800&hei=450"
-            alt="Dell Pro Precision Fixed Workstation">
+            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/desktops/dell-pro-max/fcst2250/media-gallery/desktop-dell-pro-max-fct2250-tower-bk-lockable-hdd-slim-odd-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=804&wid=612&qlt=100,1&resMode=sharp2&size=612,804&chrss=full"
+            alt="Dell Pro Max Tower Workstation">
         </div>
         <div class="card-body">
           <span class="card-spec-tag">Workstation · NVIDIA RTX · Win 11 Pro</span>
-          <h4 class="card-name">Dell Pro Precision Fixed Workstation</h4>
+          <h4 class="card-name">Dell Pro Max Tower Workstation</h4>
           <p class="card-desc">Tower workstation with NVIDIA RTX graphics, dual storage bays, ECC memory — for CAD, rendering, and simulation workloads.</p>
           <span class="card-atc">Add to Cart</span>
         </div>
@@ -375,7 +377,7 @@
       <div class="product-card">
         <div class="card-img-wrap">
           <img class="card-img"
-            src="https://m.media-amazon.com/images/I/61VCPrm21cL._AC_SL1500_.jpg"
+            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/desktops/dell-pro/qct1250/media-gallery/desktop-dell-pro-qct1250-tower-bk-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=804&wid=606&qlt=100,1&resMode=sharp2&size=606,804&chrss=full"
             alt="Dell Pro Slim Desktop 7020 SFF">
         </div>
         <div class="card-body">
@@ -389,7 +391,7 @@
       <div class="product-card">
         <div class="card-img-wrap">
           <img class="card-img"
-            src="https://m.media-amazon.com/images/I/71LGFPRe-CL._AC_SL1500_.jpg"
+            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/desktops/optiplex-desktops/optiplex-d13-micro/media-gallery-13-5-standard/desktop-optiplex-7020-mff-black-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=804&wid=506&qlt=100,1&resMode=sharp2&size=506,804&chrss=full"
             alt="Dell Pro Micro Plus Mini PC">
         </div>
         <div class="card-body">
@@ -403,13 +405,27 @@
       <div class="product-card">
         <div class="card-img-wrap">
           <img class="card-img"
-            src="https://m.media-amazon.com/images/I/71sn-5jOVKL._AC_SL1500_.jpg"
+            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/desktops/optiplex-desktops/optiplex-d13-micro/media-gallery-13-5-standard/desktop-optiplex-7020-mff-black-gallery-2.psd?fmt=png-alpha&pscan=auto&scl=1&hei=804&wid=506&qlt=100,1&resMode=sharp2&size=506,804&chrss=full"
             alt="Dell Pro Micro Plus Core Ultra 7">
         </div>
         <div class="card-body">
           <span class="card-spec-tag">Mini PC · Core Ultra 7 · 20-Core · AI</span>
           <h4 class="card-name">Dell Pro Micro Plus — Core Ultra 7</h4>
           <p class="card-desc">Intel Core Ultra 7 (20-Core) with dedicated NPU — the most powerful compact desktop Dell makes. Windows 11 Pro, vPro remote management.</p>
+          <span class="card-atc">Add to Cart</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img-wrap">
+          <img class="card-img"
+            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/desktops/dell-pro/qct1250/media-gallery/desktop-dell-pro-qct1250-tower-bk-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=804&wid=606&qlt=100,1&resMode=sharp2&size=606,804&chrss=full"
+            alt="Dell OptiPlex Tower Desktop">
+        </div>
+        <div class="card-body">
+          <span class="card-spec-tag">Tower · Core Ultra 5 · Dual-Display</span>
+          <h4 class="card-name">Dell OptiPlex Tower (Full Size)</h4>
+          <p class="card-desc">Full tower form factor with Intel Core Ultra 5, dual PCIe expansion slots, dual-display support — for users who need maximum expandability and GPU headroom.</p>
           <span class="card-atc">Add to Cart</span>
         </div>
       </div>

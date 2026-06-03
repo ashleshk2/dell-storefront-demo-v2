@@ -117,7 +117,7 @@
     }
     .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
     .card-img-wrap { height: 240px; background: var(--lighter-bg); overflow: hidden; flex-shrink: 0; }
-    .card-img { width: 100%; height: 100%; object-fit: cover; }
+    .card-img { width: 100%; height: 100%; object-fit: contain; padding: 12px; }
     .card-body { padding: var(--space-md); border-top: 1px solid var(--border); display: flex; flex-direction: column; flex: 1; }
     .card-name { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; line-height: 1.35; }
     .card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.45; margin-bottom: var(--space-sm); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
@@ -177,13 +177,14 @@
 <section class="featured-duo section-fade">
   <div class="container">
     <span class="section-eyebrow">FEATURED PRODUCTS</span>
-    <h2 style="color:var(--white); margin-bottom: var(--space-lg);">Top Two Laptops for Enterprise Teams</h2>
+    <h2 style="color: var(--brand-dark-tint); margin-bottom: var(--space-lg);">Top Two Laptops for Enterprise Teams</h2>
     <div class="duo-grid">
       <div class="duo-card">
-        <div class="duo-glow"></div>
-        <img class="duo-product-img"
-          src="https://i.dell.com/is/image/DellContent/content/dam/documents-and-videos/dv2/pan-dell/en/product-launch/laptops-and-2n1s/dell-pro-laptops/dell-pro-7-p703260-p703265-p704260-p704265/site-banners/2601g0170-gl-bb-site-dell-pro-7-laptop-p703260-p704260-family-shot-1610x906-intel.jpg?wid=1610&hei=906"
-          alt="Dell Pro 7 Laptop">
+        <div class="duo-media">
+          <img class="duo-product-img"
+            src="https://i.dell.com/is/image/DellContent/content/dam/documents-and-videos/dv2/pan-dell/en/product-launch/laptops-and-2n1s/dell-pro-laptops/dell-pro-7-p703260-p703265-p704260-p704265/site-banners/2601g0170-gl-bb-site-dell-pro-7-laptop-p703260-p704260-family-shot-1610x906-intel.jpg?wid=1610&hei=906"
+            alt="Dell Pro 7 Laptop">
+        </div>
         <div class="duo-content">
           <p class="duo-descriptor">FLEET FLAGSHIP</p>
           <h3 class="duo-product-name">
@@ -195,10 +196,11 @@
         </div>
       </div>
       <div class="duo-card">
-        <div class="duo-glow"></div>
-        <img class="duo-product-img"
-          src="https://i.dell.com/is/image/DellContent/content/dam/documents-and-videos/dv2/pan-dell/en/product-launch/laptops-and-2n1s/dell-xps-laptops/dx13260-laptop/site-banners/2601g0169-dell-xps-13-dx13260-roma-in-sky-site-banners-2560x900-clean.jpg?fmt=pjpg&pscan=auto&scl=1&hei=900&wid=2560&resMode=sharp2&size=2560,900&op_usm=1.75,0.3,2,0"
-          alt="Dell XPS 13">
+        <div class="duo-media">
+          <img class="duo-product-img"
+            src="https://i.dell.com/is/image/DellContent/content/dam/documents-and-videos/dv2/pan-dell/en/product-launch/laptops-and-2n1s/dell-xps-laptops/dx13260-laptop/site-banners/2601g0169-dell-xps-13-dx13260-roma-in-sky-site-banners-2560x900-clean.jpg?fmt=pjpg&pscan=auto&scl=1&hei=900&wid=2560&resMode=sharp2&size=2560,900&op_usm=1.75,0.3,2,0"
+            alt="Dell XPS 13">
+        </div>
         <div class="duo-content">
           <p class="duo-descriptor">EXECUTIVE ULTRABOOK</p>
           <h3 class="duo-product-name">
@@ -382,8 +384,8 @@
       <div class="product-card">
         <div class="card-img-wrap">
           <img class="card-img"
-            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/shutterstock-2352697593-na-spring-sale-db14250nt-se2726h-2560x900.jpg?fmt=pjpg&pscan=auto&scl=1&hei=450&wid=800&resMode=sharp2&size=800,450&op_usm=1.75,0.3,2,0"
-            alt="Dell Latitude 14 Plus">
+            src="https://i.dell.com/is/image/DellContent/content/dam/documents-and-videos/dv2/pan-dell/en/product-launch/laptops-and-2n1s/dell-pro-laptops/dell-pro-7-p703260-p703265-p704260-p704265/site-banners/2601g0170-gl-bb-site-dell-pro-7-laptop-p703260-p704260-family-shot-1610x906-intel.jpg?wid=800&hei=450"
+            alt="Dell Latitude 14 Plus enterprise laptop">
         </div>
         <div class="card-body">
           <span class="card-spec-tag">Intel Core Ultra · AI PC</span>
@@ -396,8 +398,8 @@
       <div class="product-card">
         <div class="card-img-wrap">
           <img class="card-img"
-            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/na/heroes/us-ca-bigbets-homepage-desktop-site-banner-2560x900-db14250t-copilot.jpg?fmt=pjpg&pscan=auto&scl=1&hei=450&wid=800&resMode=sharp2&size=800,450&op_usm=1.75,0.3,2,0"
-            alt="Dell Latitude Copilot+ PC">
+            src="https://i.dell.com/is/image/DellContent/content/dam/documents-and-videos/dv2/pan-dell/en/product-launch/laptops-and-2n1s/dell-pro-laptops/dell-pro-5-precision-pw514260-pw516260-pw514265-pw516265/site-banners/2601g0167-gl-bb-site-dell-pro-5-precision-laptops-pw514260-pw516260-1610x906-intel-clean.jpg?wid=800&hei=450"
+            alt="Dell Latitude 14 Copilot+ enterprise laptop">
         </div>
         <div class="card-body">
           <span class="card-spec-tag">Copilot+ PC · Intel Core Ultra</span>
@@ -410,8 +412,8 @@
       <div class="product-card">
         <div class="card-img-wrap">
           <img class="card-img"
-            src="https://m.media-amazon.com/images/I/61mO0HqCraL._AC_SL1500_.jpg"
-            alt="Dell Latitude 5450 AI Laptop">
+            src="https://i.dell.com/is/image/DellContent/content/dam/documents-and-videos/dv2/pan-dell/en/product-launch/laptops-and-2n1s/dell-s-laptops/ds14260-ds16260-laptops/site-banners/family/2601g0157-gl-pd-site-dell-ds14260-ds16260-1610x906.jpg?wid=800&hei=450"
+            alt="Dell Latitude 5450 AI business laptop">
         </div>
         <div class="card-body">
           <span class="card-spec-tag">Core Ultra 7 155U · 14" FHD · AI PC</span>
@@ -424,8 +426,8 @@
       <div class="product-card">
         <div class="card-img-wrap">
           <img class="card-img"
-            src="https://m.media-amazon.com/images/I/71Ix1phRaYL._AC_SL1500_.jpg"
-            alt="Dell Latitude 5550 Business Laptop">
+            src="https://i.dell.com/is/image/DellContent/content/dam/documents-and-videos/dv2/pan-dell/en/product-launch/laptops-and-2n1s/dell-xps-laptops/dx13260-laptop/site-banners/2601g0169-dell-xps-13-dx13260-roma-in-sky-site-banners-2560x900-clean.jpg?fmt=pjpg&pscan=auto&scl=1&hei=450&wid=800&resMode=sharp2&size=800,450&op_usm=1.75,0.3,2,0"
+            alt="Dell Latitude 5550 business laptop">
         </div>
         <div class="card-body">
           <span class="card-spec-tag">Core Ultra 5 · 15.6" FHD · Win 11 Pro</span>
@@ -438,8 +440,8 @@
       <div class="product-card">
         <div class="card-img-wrap">
           <img class="card-img"
-            src="https://m.media-amazon.com/images/I/81NdtH8O-LL._AC_SL1500_.jpg"
-            alt="Dell Latitude 3550 Enterprise Laptop">
+            src="https://i.dell.com/is/image/DellContent/content/dam/documents-and-videos/dv2/pan-dell/en/product-launch/laptops-and-2n1s/dell-pro-laptops/dell-pro-7-p703260-p703265-p704260-p704265/site-banners/2601g0170-gl-bb-site-dell-pro-7-laptop-p703260-p704260-family-shot-1610x906-intel.jpg?wid=1610&hei=906"
+            alt="Dell Latitude 3550 enterprise laptop">
         </div>
         <div class="card-body">
           <span class="card-spec-tag">Core Ultra 7 · 64GB DDR5 · Win 11 Pro</span>

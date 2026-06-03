@@ -122,7 +122,7 @@
     .product-card { position: relative; background: var(--white); border-radius: 16px; box-shadow: var(--card-shadow); overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; display: flex; flex-direction: column; }
     .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
     .card-img-wrap { height: 240px; background: var(--brand-dark); overflow: hidden; flex-shrink: 0; }
-    .card-img { width: 100%; height: 100%; object-fit: cover; }
+    .card-img { width: 100%; height: 100%; object-fit: contain; padding: 12px; }
     .card-body { padding: var(--space-md); border-top: 1px solid var(--border); display: flex; flex-direction: column; flex: 1; }
     .card-name { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; line-height: 1.35; }
     .card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.45; margin-bottom: var(--space-sm); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
@@ -208,13 +208,14 @@
 <section class="featured-duo section-fade">
   <div class="container">
     <span class="section-eyebrow">FEATURED SERVERS</span>
-    <h2 style="color:var(--white); margin-bottom: var(--space-lg);">2U Performance or Dense AI Workloads</h2>
+    <h2 style="color: var(--brand-dark-tint); margin-bottom: var(--space-lg);">2U Performance or Dense AI Workloads</h2>
     <div class="duo-grid">
       <div class="duo-card">
-        <div class="duo-glow"></div>
-        <img class="duo-product-img"
-          src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/r760xs/media-gallery/server-poweredge-r760xs-black-gallery-5.psd?fmt=pjpg&pscan=auto&scl=1&hei=906&wid=1610&qlt=100,1&resMode=sharp2&size=1610,906"
-          alt="Dell PowerEdge R760xs 2U rack server">
+        <div class="duo-media">
+          <img class="duo-product-img"
+            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/r760xs/media-gallery/server-poweredge-r760xs-black-gallery-5.psd?fmt=pjpg&pscan=auto&scl=1&hei=906&wid=1610&qlt=100,1&resMode=sharp2&size=1610,906"
+            alt="Dell PowerEdge R760xs 2U rack server">
+        </div>
         <div class="duo-content">
           <p class="duo-descriptor">2U RACK SERVER</p>
           <h3 class="duo-product-name">
@@ -226,10 +227,11 @@
         </div>
       </div>
       <div class="duo-card">
-        <div class="duo-glow"></div>
-        <img class="duo-product-img"
-          src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/ssl-bfcm-cons-dell-ls-latitude-9450t-poweredge-r760-uhp-2604-01-br-promo-c-lf-1610x906.jpg?wid=800&hei=450"
-          alt="Dell PowerEdge R760">
+        <div class="duo-media">
+          <img class="duo-product-img"
+            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/r760/media-gallery/server-poweredge-r760-black-gallery-1.psd?fmt=pjpg&pscan=auto&scl=1&hei=906&wid=1610&qlt=100,1&resMode=sharp2&size=1610,906"
+            alt="Dell PowerEdge R760 rack server">
+        </div>
         <div class="duo-content">
           <p class="duo-descriptor">ENTERPRISE INFRASTRUCTURE</p>
           <h3 class="duo-product-name">
@@ -278,7 +280,7 @@
       <div class="product-card">
         <span class="best-seller-badge">BEST SELLER</span>
         <div class="card-img-wrap">
-          <img class="card-img" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/ssl-bfcm-cons-dell-ls-latitude-9450t-poweredge-r760-uhp-2604-01-br-promo-c-lf-1610x906.jpg?wid=600&hei=338" alt="PowerEdge R760 lifestyle">
+          <img class="card-img" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/r760/media-gallery/server-poweredge-r760-black-gallery-1.psd?fmt=pjpg&pscan=auto&scl=1&hei=450&wid=800&qlt=100,1&resMode=sharp2&size=800,450" alt="Dell PowerEdge R760 server">
         </div>
         <div class="card-body">
           <h4 class="card-name">PowerEdge R760 with ProSupport</h4>
@@ -289,7 +291,7 @@
       <div class="product-card">
         <span class="best-seller-badge">BEST SELLER</span>
         <div class="card-img-wrap">
-          <img class="card-img" src="https://i.dell.com/is/image/DellContent/content/dam/web-resources/project-specific/newsroom/images/nvidia-ai-factory-ai-infra-item-all-944x560.png?wid=800&hei=450" alt="Dell NVIDIA AI Factory">
+          <img class="card-img" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/r760xs/media-gallery/server-poweredge-r760xs-black-gallery-4.psd?fmt=pjpg&pscan=auto&scl=1&hei=450&wid=800&qlt=100,1&resMode=sharp2&size=800,450" alt="Dell PowerEdge dense NVMe server">
         </div>
         <div class="card-body">
           <h4 class="card-name">PowerEdge AI Infrastructure</h4>
@@ -353,8 +355,8 @@
     <div class="context-inner">
       <div class="context-visual">
         <img
-          src="https://i.dell.com/is/image/DellContent/content/dam/web-resources/project-specific/newsroom/images/nvidia-ai-factory-ai-infra-item-all-944x560.png?wid=1610&hei=906"
-          alt="Dell PowerEdge servers in enterprise data center — NVIDIA AI Factory deployment"
+          src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/r760/media-gallery/server-poweredge-r760-black-gallery-1.psd?fmt=pjpg&pscan=auto&scl=1&hei=906&wid=1610&qlt=100,1&resMode=sharp2&size=1610,906"
+          alt="Dell PowerEdge R760 enterprise rack server"
           width="1610" height="906">
         <div class="context-visual-overlay"></div>
       </div>
@@ -427,8 +429,8 @@
       <div class="product-card">
         <div class="card-img-wrap">
           <img class="card-img"
-            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/r760xs/media-gallery/server-poweredge-r760xs-black-gallery-2.psd?fmt=pjpg&pscan=auto&scl=1&hei=906&wid=1610&qlt=100,1&resMode=sharp2&size=1610,906"
-            alt="Dell PowerEdge Storage Configuration">
+            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/r760xs/media-gallery/server-poweredge-r760xs-black-gallery-4.psd?fmt=pjpg&pscan=auto&scl=1&hei=906&wid=1610&qlt=100,1&resMode=sharp2&size=1610,906"
+            alt="Dell PowerEdge Storage Configuration — 24 NVMe drive bays">
         </div>
         <div class="card-body">
           <span class="card-spec-tag">NVMe SSD · RAID · Enterprise Storage</span>
@@ -441,8 +443,8 @@
       <div class="product-card">
         <div class="card-img-wrap">
           <img class="card-img"
-            src="https://i.dell.com/is/image/DellContent/content/dam/web-resources/project-specific/newsroom/images/nvidia-ai-factory-ai-infra-item-all-944x560.png?wid=800&hei=450"
-            alt="Dell PowerEdge AI Infrastructure">
+            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/r760/media-gallery/server-poweredge-r760-black-gallery-1.psd?fmt=pjpg&pscan=auto&scl=1&hei=450&wid=800&qlt=100,1&resMode=sharp2&size=800,450"
+            alt="Dell PowerEdge R760 AI Infrastructure">
         </div>
         <div class="card-body">
           <span class="card-spec-tag">NVIDIA Certified · AI Inference · PCIe Gen5</span>
@@ -483,8 +485,8 @@
       <div class="product-card">
         <div class="card-img-wrap">
           <img class="card-img"
-            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/b2l-wellcome-sanger-institute-2880x1620.jpg?fmt=pjpg&op_usm=1.75,0.3,2,0&resMode=sharp2&wid=800&hei=450"
-            alt="Dell PowerEdge enterprise data center deployment">
+            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/r760xs/media-gallery/server-poweredge-r760xs-black-gallery-4.psd?fmt=pjpg&pscan=auto&scl=1&hei=450&wid=800&qlt=100,1&resMode=sharp2&size=800,450"
+            alt="Dell PowerEdge ProDeploy rack deployment">
         </div>
         <div class="card-body">
           <span class="card-spec-tag">ProDeploy · Fleet Imaging · On-Site</span>

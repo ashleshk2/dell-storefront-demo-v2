@@ -12,8 +12,9 @@
   --primary-dark:   #005CA5;
   --primary-deep:   #0d2155;
   --primary-mid:    #0c32a4;
+  --brand-color:    #0076CE;
   --brand-blue:     #0076CE;
-  --brand-dark:     #091840;
+  --brand-dark:     #001E3D;
   --brand-dark-tint:#0d2155;
   --brand-mid:      #0c32a4;
   --brand-glow:     rgba(0,118,206,0.4);
@@ -1122,24 +1123,76 @@ p { margin-bottom: 0; line-height: 1.7; font-size: 1rem; }
 
 .product-grid-inner { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; margin-top: var(--space-lg); }
 
-/* Featured Duo */
-.featured-duo { background: var(--brand-dark); padding: var(--space-2xl) 0; position: relative; overflow: hidden; }
-.featured-duo::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, color-mix(in srgb, var(--primary) 12%, transparent) 0%, transparent 70%); pointer-events: none; }
+/* Featured Duo — LIGHT store mode, separated media + content zones */
+.featured-duo {
+  background: var(--light-gray);
+  padding: var(--space-2xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+.featured-duo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0,118,206,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
 .featured-duo .container { position: relative; z-index: 1; }
 .duo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: var(--space-lg); }
-.duo-card { position: relative; background: rgba(255,255,255,0.04); border: 1px solid color-mix(in srgb, var(--primary) 20%, transparent); border-radius: 16px; overflow: hidden; min-height: 460px; padding: var(--space-lg); display: flex; flex-direction: column; justify-content: flex-end; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.duo-card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px color-mix(in srgb, var(--primary) 18%, transparent); }
-.duo-glow { position: absolute; bottom: -80px; right: -80px; width: 300px; height: 300px; background: radial-gradient(ellipse, var(--primary) 0%, transparent 70%); opacity: 0.15; pointer-events: none; transition: opacity 0.3s ease; }
-.duo-card:hover .duo-glow { opacity: 0.25; }
-.duo-product-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; z-index: 0; }
-.duo-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, color-mix(in srgb, var(--brand-dark) 92%, transparent) 0%, color-mix(in srgb, var(--brand-dark) 55%, transparent) 45%, color-mix(in srgb, var(--brand-dark) 10%, transparent) 100%); z-index: 1; pointer-events: none; }
-.duo-content { position: relative; z-index: 2; }
-.duo-descriptor { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: color-mix(in srgb, var(--primary) 90%, transparent); margin-bottom: 8px; font-weight: 600; }
-.duo-product-name { font-size: clamp(28px, 3.5vw, 44px); font-weight: 800; line-height: 1.0; margin-bottom: var(--space-sm); letter-spacing: -0.02em; }
-.duo-name-main { color: var(--white); display: block; }
+
+/* Card: column layout — media zone on top, content zone below */
+.duo-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.duo-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,118,206,0.13); }
+.duo-card::after { display: none; } /* no gradient overlay needed */
+.duo-glow { display: none; } /* removed: was for dark overlay pattern */
+
+/* Media zone — image sits in its own zone, no text overlap */
+.duo-media {
+  width: 100%;
+  background: var(--lighter-bg);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+}
+.duo-product-img {
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  object-fit: contain;
+  padding: 20px;
+  pointer-events: none;
+  display: block;
+}
+
+/* Content zone — below the image, light background */
+.duo-content {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-md) var(--space-lg) var(--space-lg);
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.duo-descriptor { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--primary); margin-bottom: 8px; font-weight: 600; }
+.duo-product-name { font-size: clamp(22px, 2.5vw, 36px); font-weight: 800; line-height: 1.0; margin-bottom: var(--space-sm); letter-spacing: -0.02em; }
+.duo-name-main { color: var(--text); display: block; }
 .duo-name-model { color: var(--primary); display: block; }
-.duo-tagline { font-size: 13px; color: rgba(255,255,255,0.58); line-height: 1.55; margin-bottom: var(--space-md); max-width: 260px; }
-.duo-cta { display: inline-flex; align-items: center; padding: 10px 24px; background: var(--primary); color: var(--white); border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; transition: opacity 0.2s ease, transform 0.2s ease; text-decoration: none; }
+.duo-tagline { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: var(--space-md); max-width: 360px; flex: 1; }
+.duo-cta { display: inline-flex; align-items: center; padding: 10px 24px; background: var(--primary); color: var(--white); border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; transition: opacity 0.2s ease, transform 0.2s ease; text-decoration: none; align-self: flex-start; margin-top: auto; }
 .duo-cta:hover { opacity: 0.88; transform: scale(1.02); text-decoration: none; }
 
 /* Best Sellers bar */
@@ -1150,7 +1203,5 @@ p { margin-bottom: 0; line-height: 1.7; font-size: 1rem; }
 
 @media (max-width: 900px) {
   .duo-grid { grid-template-columns: 1fr; }
-  .duo-card { min-height: 340px; }
-  .duo-product-img { opacity: 0.5; }
   .best-sellers-grid { grid-template-columns: repeat(2, 1fr); }
 }
